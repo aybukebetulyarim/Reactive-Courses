@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  demo-app-db:
+    image: postgres:13.1-alpine
+    container_name: demo-app-db
+    ports:
+      - 5435:5432
+    restart: always
+    environment:
+      - POSTGRES_USER=userdemodb
+      - POSTGRES_PASSWORD=pwd
+      - POSTGRES_DB=userdemodb

@@ -1,0 +1,23 @@
+com.reactive.courses:
+  database:
+    host: 127.0.0.1
+    port: 5435
+    name: userdemodb
+    schema: public
+    username: userdemodb
+    password: pwd
+    pool:
+      size:
+        initial: 3
+        max: 10
+
+spring:
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://127.0.0.1:5435/userdemodb
+    user: userdemodb
+    password: pwd
+    baseline-version: 0
+
+server:
+  port: 8081
